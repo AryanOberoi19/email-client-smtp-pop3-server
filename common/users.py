@@ -14,7 +14,7 @@ field and everything except APOP keeps working.
 Hashing protects the file at rest, but it does not protect the wire. Both
 SMTP AUTH LOGIN and POP3 USER/PASS send the password across the connection in
 the clear -- AUTH LOGIN merely base64-encodes it, and base64 is an encoding,
-not encryption. Anyone capturing the traffic (see docs/wireshark_capture.md)
+not encryption. Anyone capturing the traffic (see docs/network/wireshark.md)
 reads the password straight off the packet. The real-world answer is to run
 the session inside TLS: implicit TLS on port 465/995, or STARTTLS on the
 plaintext port. APOP, implemented in the POP3 server, is the historical

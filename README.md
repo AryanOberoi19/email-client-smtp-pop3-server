@@ -77,7 +77,7 @@ python3 client/cli.py          # or:  python3 client/gui.py
 **Run the tests:**
 
 ```bash
-python3 -m unittest discover tests -v      # 47 tests
+python3 -m unittest discover tests -v      # 48 tests
 ```
 
 ## Default accounts
@@ -172,8 +172,10 @@ Project/
 │   ├── mail_client.py        SMTPClient and POP3Client
 │   ├── cli.py                menu-driven terminal client
 │   └── gui.py                Tkinter client
-├── tests/test_project.py     47 unit / integration / negative tests
-├── docs/wireshark_capture.md capturing and reading the packets
+├── tests/test_project.py     48 unit / integration / negative tests
+├── docs/
+│   ├── report/Project Report_CN.ipynb   the executed project report
+│   └── network/wireshark.md  capturing and reading the packets
 ├── store/                    the mailboxes
 └── logs/                     protocol traces, one file per component
 ```
@@ -214,7 +216,7 @@ silently truncate. `tests/test_project.py` covers exactly that case.
 the two-byte sequence explicitly.
 
 **Passwords cross the wire in the clear.** `AUTH LOGIN` base64-encodes them,
-which is an encoding, not encryption. `docs/wireshark_capture.md` shows how to
+which is an encoding, not encryption. `docs/network/wireshark.md` shows how to
 read one straight out of a packet capture. TLS is the real answer; `APOP`
 (implemented in the POP3 server) was the historical alternative — and it
 carries its own trade-off, since verifying an APOP digest forces the server to
