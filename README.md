@@ -1,8 +1,6 @@
 # Email Client Using SMTP and POP3
 
-**Computer Networks (702AI0C023) — Semester V project**
-Aryan Oberoi (I041) · B.Tech Artificial Intelligence · Division I, Batch B1
-NMIMS MPSTME
+**Computer Networks project**
 
 A complete mail system running entirely on `127.0.0.1`: an SMTP server, a POP3
 server and a mail client, all written directly on TCP sockets with no external
