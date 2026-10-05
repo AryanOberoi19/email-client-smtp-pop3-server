@@ -48,6 +48,11 @@ and the POP3 three-state model where `DELE` only marks and `QUIT` commits.
 Python 3.8+ and nothing else. `tkinter` ships with the standard installer and
 is only needed for the GUI.
 
+Optional: the modern-looking GUI (`client/gui_modern.py`) needs
+`pip install customtkinter`. It is the only third-party package anywhere in the
+project, and nothing else imports it. If it is missing, `gui_modern.py` opens
+the standard Tkinter GUI instead.
+
 ```bash
 python3 --version
 ```
@@ -72,6 +77,7 @@ python3 pop3_server.py
 
 # terminal 3
 python3 client/cli.py          # or:  python3 client/gui.py
+                               # or:  python3 client/gui_modern.py
 ```
 
 **Run the tests:**
@@ -171,7 +177,8 @@ Project/
 ├── client/
 │   ├── mail_client.py        SMTPClient and POP3Client
 │   ├── cli.py                menu-driven terminal client
-│   └── gui.py                Tkinter client
+│   ├── gui.py                Tkinter client (standard library only)
+│   └── gui_modern.py         webmail-style client (needs customtkinter)
 ├── tests/test_project.py     48 unit / integration / negative tests
 ├── docs/
 │   ├── report/Project Report_CN.ipynb   the executed project report
